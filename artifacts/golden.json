@@ -1,0 +1,103 @@
+[
+ {
+  "symptoms": [
+   "arm pain",
+   "hip pain",
+   "loss of sensation",
+   "low back pain",
+   "neck pain",
+   "paresthesia",
+   "shoulder pain"
+  ],
+  "dnn": {
+   "top1": "degenerative disc disease",
+   "p": 0.3139781951904297
+  },
+  "logreg": {
+   "top1": "degenerative disc disease",
+   "p": 0.35315151733678596
+  }
+ },
+ {
+  "symptoms": [
+   "abnormal appearing skin",
+   "acne or pimples",
+   "lip swelling",
+   "skin growth",
+   "skin irritation",
+   "skin swelling",
+   "wrinkles on skin"
+  ],
+  "dnn": {
+   "top1": "atrophic skin condition",
+   "p": 0.999955415725708
+  },
+  "logreg": {
+   "top1": "atrophic skin condition",
+   "p": 0.9996650380303187
+  }
+ },
+ {
+  "symptoms": [
+   "hot flashes",
+   "irregular heartbeat",
+   "palpitations",
+   "sharp chest pain",
+   "shortness of breath"
+  ],
+  "dnn": {
+   "top1": "angina",
+   "p": 0.999997615814209
+  },
+  "logreg": {
+   "top1": "angina",
+   "p": 0.9341581104582521
+  }
+ },
+ {
+  "symptoms": [
+   "cough",
+   "fever",
+   "nasal congestion"
+  ],
+  "dnn": {
+   "top1": "chronic otitis media",
+   "p": 0.18759915232658386
+  },
+  "logreg": {
+   "top1": "conjunctivitis due to virus",
+   "p": 0.0955398093705931
+  }
+ },
+ {
+  "symptoms": [
+   "arm pain",
+   "arm swelling",
+   "foot or toe pain"
+  ],
+  "dnn": {
+   "top1": "thrombophlebitis",
+   "p": 0.9831529259681702
+  },
+  "logreg": {
+   "top1": "thrombophlebitis",
+   "p": 0.5958297484858109
+  }
+ },
+ {
+  "symptoms": [
+   "lip swelling",
+   "lymphedema",
+   "skin dryness peeling scaliness or roughness",
+   "skin swelling"
+  ],
+  "dnn": {
+   "top1": "hemangioma",
+   "p": 0.9997795224189758
+  },
+  "logreg": {
+   "top1": "hemangioma",
+   "p": 0.9653537600863632
+  }
+ }
+]

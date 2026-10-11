@@ -1,0 +1,289 @@
+{
+ "msk_classes": [
+  "ankylosing spondylitis",
+  "arthritis of the hip",
+  "bursitis",
+  "carpal tunnel syndrome",
+  "chronic back pain",
+  "complex regional pain syndrome",
+  "degenerative disc disease",
+  "fibromyalgia",
+  "fracture of the arm",
+  "fracture of the facial bones",
+  "fracture of the leg",
+  "fracture of the rib",
+  "gout",
+  "injury to the shoulder",
+  "joint effusion",
+  "muscle spasm",
+  "osteoarthritis",
+  "rheumatoid arthritis",
+  "spondylitis",
+  "spondylolisthesis",
+  "spondylosis",
+  "sprain or strain",
+  "tendinitis"
+ ],
+ "spine_cluster": [
+  "degenerative disc disease",
+  "spondylosis",
+  "ankylosing spondylitis",
+  "spondylolisthesis",
+  "chronic back pain"
+ ],
+ "comparison": [
+  {
+   "Model": "DNN (V3, seed 42)",
+   "Accuracy": 0.8474,
+   "F1-weighted": 0.8512,
+   "F1-macro": 0.8457,
+   "Waktu training (s)": 36.8,
+   "Interpretabilitas": "Rendah (black box)"
+  },
+  {
+   "Model": "Logistic Regression",
+   "Accuracy": 0.85,
+   "F1-weighted": 0.8507,
+   "F1-macro": 0.8499,
+   "Waktu training (s)": 71.2,
+   "Interpretabilitas": "Tinggi (koefisien terbaca)"
+  },
+  {
+   "Model": "Random Forest (40 pohon)",
+   "Accuracy": 0.8231,
+   "F1-weighted": 0.8248,
+   "F1-macro": 0.8243,
+   "Waktu training (s)": 97.6,
+   "Interpretabilitas": "Sedang (feature importance)"
+  },
+  {
+   "Model": "XGBoost (57 putaran)",
+   "Accuracy": 0.8303,
+   "F1-weighted": 0.8316,
+   "F1-macro": 0.8294,
+   "Waktu training (s)": 525.4,
+   "Interpretabilitas": "Sedang (feature importance)"
+  }
+ ],
+ "robustness": [
+  {
+   "Model": "DNN",
+   "F1 rata-rata grup MSK": 0.89,
+   "F1 rata-rata semua kelas": 0.846,
+   "Spondylosis -> tebakan DDD (%)": 4.1,
+   "DDD -> tebakan spondylosis (%)": 4.9
+  },
+  {
+   "Model": "LogReg",
+   "F1 rata-rata grup MSK": 0.897,
+   "F1 rata-rata semua kelas": 0.85,
+   "Spondylosis -> tebakan DDD (%)": 8.2,
+   "DDD -> tebakan spondylosis (%)": 3.1
+  },
+  {
+   "Model": "RF",
+   "F1 rata-rata grup MSK": 0.876,
+   "F1 rata-rata semua kelas": 0.824,
+   "Spondylosis -> tebakan DDD (%)": 7.4,
+   "DDD -> tebakan spondylosis (%)": 9.9
+  },
+  {
+   "Model": "XGB",
+   "F1 rata-rata grup MSK": 0.885,
+   "F1 rata-rata semua kelas": 0.829,
+   "Spondylosis -> tebakan DDD (%)": 7.4,
+   "DDD -> tebakan spondylosis (%)": 2.5
+  }
+ ],
+ "seed_study": [
+  {
+   "Konfigurasi": "V1 (256-128)",
+   "Seed": 1,
+   "Test Accuracy": 0.8483
+  },
+  {
+   "Konfigurasi": "V1 (256-128)",
+   "Seed": 2,
+   "Test Accuracy": 0.8483
+  },
+  {
+   "Konfigurasi": "V1 (256-128)",
+   "Seed": 3,
+   "Test Accuracy": 0.8487
+  },
+  {
+   "Konfigurasi": "V3 (128-64)",
+   "Seed": 1,
+   "Test Accuracy": 0.848
+  },
+  {
+   "Konfigurasi": "V3 (128-64)",
+   "Seed": 2,
+   "Test Accuracy": 0.8469
+  },
+  {
+   "Konfigurasi": "V3 (128-64)",
+   "Seed": 3,
+   "Test Accuracy": 0.8467
+  }
+ ],
+ "dataset": {
+  "rows": 163727,
+  "classes": 254,
+  "symptoms": 283,
+  "test": 32746
+ },
+ "spine_confusion": {
+  "labels": [
+   "degenerative disc disease",
+   "spondylosis",
+   "ankylosing spondylitis",
+   "spondylolisthesis",
+   "chronic back pain"
+  ],
+  "dnn": {
+   "matrix": [
+    [
+     101,
+     8,
+     2,
+     6,
+     0
+    ],
+    [
+     10,
+     166,
+     9,
+     4,
+     0
+    ],
+    [
+     0,
+     2,
+     87,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     2,
+     95,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     1,
+     147
+    ]
+   ],
+   "support": [
+    162,
+    243,
+    96,
+    103,
+    161
+   ]
+  },
+  "logreg": {
+   "matrix": [
+    [
+     113,
+     5,
+     2,
+     7,
+     0
+    ],
+    [
+     20,
+     171,
+     6,
+     4,
+     0
+    ],
+    [
+     0,
+     4,
+     86,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     2,
+     89,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     0,
+     148
+    ]
+   ],
+   "support": [
+    162,
+    243,
+    96,
+    103,
+    161
+   ]
+  }
+ },
+ "msk_f1": {
+  "dnn": {
+   "ankylosing spondylitis": 0.8614,
+   "arthritis of the hip": 0.9636,
+   "bursitis": 0.9767,
+   "carpal tunnel syndrome": 0.9607,
+   "chronic back pain": 0.9423,
+   "complex regional pain syndrome": 0.9019,
+   "degenerative disc disease": 0.6392,
+   "fibromyalgia": 0.8315,
+   "fracture of the arm": 0.8621,
+   "fracture of the facial bones": 0.9391,
+   "fracture of the leg": 0.9493,
+   "fracture of the rib": 0.9839,
+   "gout": 0.9494,
+   "injury to the shoulder": 0.9457,
+   "joint effusion": 0.9194,
+   "muscle spasm": 0.8768,
+   "osteoarthritis": 0.9644,
+   "rheumatoid arthritis": 0.9561,
+   "spondylitis": 0.7778,
+   "spondylolisthesis": 0.7851,
+   "spondylosis": 0.7427,
+   "sprain or strain": 0.8973,
+   "tendinitis": 0.8347
+  },
+  "logreg": {
+   "ankylosing spondylitis": 0.8687,
+   "arthritis of the hip": 0.954,
+   "bursitis": 0.9613,
+   "carpal tunnel syndrome": 0.9571,
+   "chronic back pain": 0.9548,
+   "complex regional pain syndrome": 0.8732,
+   "degenerative disc disease": 0.6608,
+   "fibromyalgia": 0.8213,
+   "fracture of the arm": 0.8816,
+   "fracture of the facial bones": 0.9649,
+   "fracture of the leg": 0.9423,
+   "fracture of the rib": 0.972,
+   "gout": 0.9402,
+   "injury to the shoulder": 0.9764,
+   "joint effusion": 0.9333,
+   "muscle spasm": 0.8762,
+   "osteoarthritis": 0.9524,
+   "rheumatoid arthritis": 0.9565,
+   "spondylitis": 0.9,
+   "spondylolisthesis": 0.7946,
+   "spondylosis": 0.7583,
+   "sprain or strain": 0.8776,
+   "tendinitis": 0.861
+  }
+ }
+}
